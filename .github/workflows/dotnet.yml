@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Изменено на Windows
 
     steps:
       - name: Checkout code
@@ -17,7 +17,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x' # Укажите вашу версию .NET
+          dotnet-version: '8.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
